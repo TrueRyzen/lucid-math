@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucid Math — Play Freely</title>
+  <meta name="description" content="Lucid Math — a clean, ad-free unblocked games site." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🟣</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated background layers -->
+  <div class="bg">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <header class="glass">
+    <div class="logo">
+      <div class="logo-mark">∑</div>
+      <h1>Lucid<span>Math</span></h1>
+    </div>
+
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+      </svg>
+      <input id="search" type="text" placeholder="Search games…" autocomplete="off" spellcheck="false" />
+    </div>
+
+    <div class="header-badge">100% Ad-Free</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Play <span class="gradient">Lucid</span>. Stay <span class="gradient">Focused</span>.</h2>
+      <p>A clean, ad-free collection of games. No popups. No redirects. Just play.</p>
+      <div class="hero-stats">
+        <div class="stat"><strong id="statCount">0</strong><span>Games</span></div>
+        <div class="stat"><strong>0</strong><span>Ads</span></div>
+        <div class="stat"><strong>∞</strong><span>Fun</span></div>
+      </div>
+    </section>
+
+    <section class="filters" id="filters">
+      <!-- category chips injected -->
+    </section>
+
+    <section class="games-grid" id="gamesGrid"></section>
+
+    <p id="noResults" class="no-results" hidden>No games match your search.</p>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Lucid Math — Built with 💜 for focus.</p>
+  </footer>
+
+  <!-- Fullscreen game player -->
+  <div id="player" class="player" hidden>
+    <div class="player-bar">
+      <div class="player-title">
+        <span id="playerEmoji">🎮</span>
+        <span id="playerName">Game</span>
+      </div>
+      <div class="player-actions">
+        <button id="openExternal" title="Open in new tab">↗</button>
+        <button id="closePlayer" title="Close">✕</button>
+      </div>
+    </div>
+    <iframe id="playerFrame" allowfullscreen loading="lazy" referrerpolicy="no-referrer"></iframe>
+  </div>
+
+  <script src="games.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
